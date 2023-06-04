@@ -13,7 +13,6 @@
     </head>
     <body>
         <div>Login failed</div>
-        <div>user:abc, pass:123456</div>
         <input type="button" value="Return" onclick="window.location.href='index.html'">
     </body>
 </html>

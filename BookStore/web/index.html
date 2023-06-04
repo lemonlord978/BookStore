@@ -8,22 +8,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div>
-            <form name="input" action="Login" method="get">
-	<table>
-		<tr>
-		   <td>User name:</td><td><input type="text" name="user"/></td>
-		</tr>
-		<tr>
-		   <td>Password:</td><td><input type="password" name="pass"/></td>
-		</tr>
-		<tr>
-		   <td></td><td><input type="submit" value="Login"/></td>
-		</tr>
-	</table>
-	</form>
-        </div>
-    </body>
+    <div id="wrapper">
+        <form action="" id="form-login">
+            <h1 class="form-heading">Login</h1>
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Tên đăng nhập">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" placeholder="Mật khẩu">
+                <div id="eye">
+                </div>
+            </div>
+            <input type="submit" value="Đăng nhập" class="form-submit">
+        </form>
+    </div>
+    
+</body>
 </html>
