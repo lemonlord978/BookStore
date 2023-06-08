@@ -1,6 +1,6 @@
 <%-- 
-    Document   : LoginFail
-    Created on : May 31, 2023, 9:15:53 AM
+    Document   : HomePage
+    Created on : Jun 8, 2023, 9:09:14 PM
     Author     : LEMONLORD
 --%>
 
@@ -12,7 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div>Login failed</div>
-        <input type="button" value="Return" onclick="window.location.href='index.html'">
+        <h1>Hello World!</h1>
     </body>
 </html>

@@ -30,7 +30,6 @@
                 <tr>
                     <td>DOB:</td>
                     <td><input type="date" name="dob" required></td>
-                    <!--<td><input type="text" pattern="{0,9}{1,2}/{0,9}{1,2}/{0,9}{4}" placeholder="dd/MM/yyyy" name="dob"></td> -->
                 </tr>
 
                 <tr>
