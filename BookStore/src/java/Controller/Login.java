@@ -43,7 +43,7 @@ public class Login extends HttpServlet {
         String pass = sc.getInitParameter("password");
         if (user.equals(u) && pass.equals(p)) {
             request.setAttribute("Login", suc);
-            request.getRequestDispatcher("LoginPage.jsp").forward(request, response);
+            request.getRequestDispatcher("HomePage.jsp").forward(request, response);           
         } else {
             request.setAttribute("Login", fail);
             request.getRequestDispatcher("LoginPage.jsp").forward(request, response);

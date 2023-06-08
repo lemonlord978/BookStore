@@ -7,8 +7,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : LEMONLORD
 */
 body{
+    background-image: url("../photo/Tsunami.jpg");
+    background-size: 100%;
+    background-repeat: none;
     font-family: 'Playfair Display', serif;
 }
+
 #wrapper{
     background-color: white;
     position: absolute;
@@ -16,7 +20,7 @@ body{
     left: 50%;
     width: 400px;
     transform: translate(-50%,-50%);
-    
+    height: 350px;
 }
 #wrapper h1{
     text-align: center;
