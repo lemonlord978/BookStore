@@ -43,6 +43,9 @@
                 <%}%>                
             </div>
             <% } %>
+            <div class="register">
+                Don't have an account? <a href="#">Sign in.</a>
+            </div>
             <div>
                 <input type="submit" value="Login">
             </div>

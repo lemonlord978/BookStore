@@ -1,11 +1,3 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : Jun 4, 2023, 11:38:54 PM
-    Author     : LEMONLORD
-*/
 body{
     background-image: url("../photo/Tsunami.jpg");
     background-size: cover;
@@ -13,24 +5,19 @@ body{
     font-family: 'Playfair Display', serif;
     background-attachment: fixed;
 }
-
-#wrapper{
+.wrapper{
     background-color: white;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     width: 400px;
     transform: translate(-50%,-50%);
 }
-#wrapper h1{
+.wrapper h1{
     text-align: center;
     padding: 0 0 20px 0;
+    
 }
-
-#wrapper h5{
-    color: red;
-}
-
 form{
     padding: 0 40px;
     box-sizing: border-box;
@@ -38,7 +25,7 @@ form{
 form .text-field{
     position: relative;
     border-bottom: 2px solid silver;
-    margin: 30px 0;
+    margin: 40px 0px;       
 }
 .text-field input{
     width: 100%;
@@ -70,7 +57,7 @@ form .text-field{
 }
 .text-field input:focus ~ label,
 .text-field input:valid ~ label{
-    top: -5px;
+    top: -8px;
     color: black;
 }
 .text-field input:focus ~ span::before,
@@ -86,6 +73,19 @@ input[type="submit"]{
     color: white;
     font-size: 20px;
 }
-.register{
-    padding-bottom: 10px;
+#name{
+    display: table;
+    border-spacing: 5px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: -10px;
 }
+#name .text-field{
+    display: table-cell; 
+}
+#fname{
+    width: 150px;
+}
+
+
+
