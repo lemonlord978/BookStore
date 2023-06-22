@@ -13,19 +13,48 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="navbar">
-        <ul>
-            <li class="logo"><a href="CreatePage.html"><img src="photo/Tsunami.jpg" alt="logo" class="logo-img"></a></li>
-            <li class="right"><a href="CreatePage.html" class="rp">Home</a></li>
-            <li class="right"><a href="#" class="rp">Product</a></li>
-            <li class="right"><a href="#" class="rp">Contact</a></li>
-            <li class="cart"><a href="#" class="rp">cart</a></li>
-            <li class="search"><a href="#" class="rp">search</a></li>
-        </ul>
-    </div>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="CreatePage.html">Bluebird</a></div>
+            <ul class="links">
+                <li><a href="CreatePage.html">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="icon">
+                <li class="search"><a href="#"></a><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li class="cart"><a href="#"></a><i class="fa-solid fa-cart-shopping"></i></li>
+            </div>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+            <li><a href="CreatePage.html">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Contact</a></li>
+        </div>
+    </header>
 </body>
+<script>
+    const toggleBtn = document.querySelector('.toggle-btn')
+    const toggleBtnIcon = document.querySelector('.toggle-btn i')
+    const dropdownMenu = document.querySelector('.dropdown-menu')
+
+    toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle('open')
+        const isOpen = dropdownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+    }
+</script>
 
 </html>

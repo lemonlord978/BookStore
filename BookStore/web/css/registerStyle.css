@@ -55,15 +55,19 @@ form .text-field{
     background: black;
     transition: .5s;
 }
+
 .text-field input:focus ~ label,
 .text-field input:valid ~ label{
     top: -8px;
     color: black;
 }
+
 .text-field input:focus ~ span::before,
 .text-field input:valid ~ span::before{
     width: 100%;
 }
+
+
 input[type="submit"]{
     width: 100%;
     height: 50px;
