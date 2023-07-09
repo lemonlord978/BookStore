@@ -43,8 +43,11 @@
                 <%}%>                
             </div>
             <% } %>
+            <div class="remember">
+                <input type="checkbox" value="lsRememberMe" name = "remember" > <label for="rememberMe">Remember me</label>
+            </div>
             <div class="register">
-                Don't have an account? <a href="#">Sign in.</a>
+                Don't have an account? <a href="RegisterPage.jsp">Sign in.</a>
             </div>
             <div>
                 <input type="submit" value="Login">
