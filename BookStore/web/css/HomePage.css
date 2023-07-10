@@ -218,6 +218,12 @@ input[type="button"]{
     max-width: 600px;
     line-height: 30px;
 }
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .contact{
     background-color: black;
     color: white;
