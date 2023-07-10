@@ -32,7 +32,6 @@ public class AccountDao {
 
                 user.setName(rs.getString("Username"));
                 user.setPassword(rs.getString("Password"));
-                user.setDisplayname(rs.getString("DisplayName"));
                 return user;
             }
 

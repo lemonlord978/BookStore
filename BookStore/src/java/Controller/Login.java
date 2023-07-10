@@ -1,24 +1,44 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Controller;
 
-import jakarta.servlet.ServletContext;
+import DAO.AccountDao;
+import Model.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
- * @author LEMONLORD
+ * @author PC
  */
-@WebServlet(name = "Login", urlPatterns = {"/Login"})
 public class Login extends HttpServlet {
+
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getRequestDispatcher("login.jsp").forward(request, response);
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -31,23 +51,47 @@ public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        String u = request.getParameter("user");
-        String p = request.getParameter("pass");
-        String suc = "Success";
-        String fail = "Wrong";
-        //Get data from XML
-        ServletContext sc = getServletContext();
-        String user = sc.getInitParameter("username");
-        String pass = sc.getInitParameter("password");
-        if (user.equals(u) && pass.equals(p)) {
-            request.setAttribute("Login", suc);
-            request.getRequestDispatcher("HomePage.jsp").forward(request, response);           
-        } else {
-            request.setAttribute("Login", fail);
-            request.getRequestDispatcher("LoginPage.jsp").forward(request, response);
+        try {
+            String username = request.getParameter("Username");
+            String password = request.getParameter("Password");
+            
+            String remember = request.getParameter("remember");
+            AccountDao db = new AccountDao();
+            Account account =  db.getAccountByUsernameAndPassword(username, password);
+            HttpSession session = request.getSession();
+            if(account!=null){
+               session.setAttribute("account", account);
+               session.setAttribute("a", account.getName());
+               session.setAttribute("b", account.getPassword());
+
+                if(remember!=null){
+                    Cookie u = new Cookie("username",username);
+                    Cookie p = new Cookie("password",password);
+                    u.setMaxAge(20);
+                    p.setMaxAge(20);
+                    response.addCookie(u);
+                    response.addCookie(p);
+                }
+                response.sendRedirect("HomePage.jsp");
+                
+            }else{
+                response.sendRedirect("Login");
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
+      
+        
     }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
 
 }
