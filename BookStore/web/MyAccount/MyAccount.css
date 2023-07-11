@@ -7,6 +7,12 @@
     align-items: center;
 }
 
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .MyAccount_page_title_container h1{
     font-size: 3rem;
     margin: 15px 0 15px 0;

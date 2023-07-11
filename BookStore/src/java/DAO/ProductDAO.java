@@ -26,6 +26,7 @@ public class ProductDAO extends MyDAO {
             String xImage;
             int xPrice;
             int xCateID;
+            String xAuthor;
             Product x;
             while (rs.next()) {
                 xId = rs.getInt("id");
@@ -33,7 +34,8 @@ public class ProductDAO extends MyDAO {
                 xImage = rs.getString("image");
                 xPrice = rs.getInt("price");
                 xCateID = rs.getInt("cateID");
-                x = new Product(xId, xName, xImage, xPrice, xCateID);
+                xAuthor = rs.getString("Author");
+                x = new Product(xId, xName, xImage, xPrice, xCateID, xAuthor);
                 t.add(x);
             }
 
@@ -58,6 +60,7 @@ public class ProductDAO extends MyDAO {
             String xImage;
             int xPrice;
             int xCateID;
+            String xAuthor;
             Product x;
             while (rs.next()) {
                 xId = rs.getInt("id");
@@ -65,7 +68,8 @@ public class ProductDAO extends MyDAO {
                 xImage = rs.getString("image");
                 xPrice = rs.getInt("price");
                 xCateID = rs.getInt("cateID");
-                x = new Product(xId, xName, xImage, xPrice, xCateID);
+                xAuthor = rs.getString("Author");
+                x = new Product(xId, xName, xImage, xPrice, xCateID, xAuthor);
                 t.add(x);
             }
 
@@ -93,6 +97,7 @@ public class ProductDAO extends MyDAO {
             String xImage;
             int xPrice;
             int xCateID;
+            String xAuthor;
             Product x;
             while (rs.next()) {
                 xId = rs.getInt("id");
@@ -100,7 +105,8 @@ public class ProductDAO extends MyDAO {
                 xImage = rs.getString("image");
                 xPrice = rs.getInt("price");
                 xCateID = rs.getInt("cateID");
-                x = new Product(xId, xName, xImage, xPrice, xCateID);
+                xAuthor = rs.getString("Author");
+                x = new Product(xId, xName, xImage, xPrice, xCateID, xAuthor);
                 t.add(x);
             }
 
@@ -127,6 +133,7 @@ public class ProductDAO extends MyDAO {
             String xImage;
             int xPrice;
             int xCateID;
+            String xAuthor;
             Product x;
             while (rs.next()) {
                 xId = rs.getInt("id");
@@ -134,7 +141,8 @@ public class ProductDAO extends MyDAO {
                 xImage = rs.getString("image");
                 xPrice = rs.getInt("price");
                 xCateID = rs.getInt("cateID");
-                x = new Product(xId, xName, xImage, xPrice, xCateID);
+                xAuthor = rs.getString("Author");
+                x = new Product(xId, xName, xImage, xPrice, xCateID, xAuthor);
                 t.add(x);
             }
 
@@ -160,13 +168,15 @@ public class ProductDAO extends MyDAO {
             String xImage;
             int xPrice;
             int xCateID;
+            String xAuthor;
             while (rs.next()) {
                 i = rs.getInt("id");
                 xName = rs.getString("name");
                 xImage = rs.getString("image");
                 xPrice = rs.getInt("price");
                 xCateID = rs.getInt("cateID");
-                x = new Product(i, xName, xImage, xPrice, xCateID);
+                xAuthor = rs.getString("Author");
+                x = new Product(i, xName, xImage, xPrice, xCateID, xAuthor);
             }
 
             rs.close();
@@ -191,6 +201,7 @@ public class ProductDAO extends MyDAO {
             String xImage;
             int xPrice;
             int xCateID;
+            String xAuthor;
             Product x;
             while (rs.next()) {
                 xId = rs.getInt("id");
@@ -198,7 +209,8 @@ public class ProductDAO extends MyDAO {
                 xImage = rs.getString("image");
                 xPrice = rs.getInt("price");
                 xCateID = rs.getInt("cateID");
-                x = new Product(xId, xName, xImage, xPrice, xCateID);
+                xAuthor = rs.getString("Author");
+                x = new Product(xId, xName, xImage, xPrice, xCateID, xAuthor);
                 t.add(x);
             }
 
@@ -224,6 +236,7 @@ public class ProductDAO extends MyDAO {
             String xImage;
             int xPrice;
             int xCateID;
+            String xAuthor;
             Product x;
             while (rs.next()) {
                 xId = rs.getInt("id");
@@ -231,7 +244,8 @@ public class ProductDAO extends MyDAO {
                 xImage = rs.getString("image");
                 xPrice = rs.getInt("price");
                 xCateID = rs.getInt("cateID");
-                x = new Product(xId, xName, xImage, xPrice, xCateID);
+                xAuthor = rs.getString("Author");
+                x = new Product(xId, xName, xImage, xPrice, xCateID, xAuthor);
                 t.add(x);
             }
 
@@ -257,6 +271,7 @@ public class ProductDAO extends MyDAO {
             String xImage;
             int xPrice;
             int xCateID;
+            String xAuthor;
             Product x;
             while (rs.next()) {
                 xId = rs.getInt("id");
@@ -264,7 +279,8 @@ public class ProductDAO extends MyDAO {
                 xImage = rs.getString("image");
                 xPrice = rs.getInt("price");
                 xCateID = rs.getInt("cateID");
-                x = new Product(xId, xName, xImage, xPrice, xCateID);
+                xAuthor = rs.getString("Author");
+                x = new Product(xId, xName, xImage, xPrice, xCateID, xAuthor);
                 t.add(x);
             }
 
@@ -306,6 +322,7 @@ public class ProductDAO extends MyDAO {
             ps.setInt(3, x.getPrice());
             ps.setInt(4, x.getCateID());
             ps.setInt(5, x.getId());
+            ps.setString(6, x.getAuthor());
             ps.executeUpdate();
             ps.close();
             

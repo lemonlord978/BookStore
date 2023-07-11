@@ -6,16 +6,26 @@ public class Product {
     private String image;
     private int price;
     private int	cateID;
+    private String author;
 
     public Product() {
     }
 
-    public Product(int id, String name, String image, int price, int cateID) {
+    public Product(int id, String name, String image, int price, int cateID, String author) {
         this.id = id;
         this.name = name;
         this.image = image;
         this.price = price;
         this.cateID = cateID;
+        this.author = author;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public int getId() {

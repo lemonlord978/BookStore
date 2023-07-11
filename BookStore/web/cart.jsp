@@ -8,7 +8,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>My Account</title>
-        <link rel="icon" href="img/dc_logo.jpg">
+        <link rel="icon" href="https://cdn.dribbble.com/users/1189548/screenshots/4884012/media/486695de6b18ec97632abfe85851ca52.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="productpage/css/navbar.css"/>
         <link rel="stylesheet" href="homepage/css/footer.css"/>
@@ -24,7 +24,7 @@
         <input type="hidden" id="status"
                value="<%=request.getAttribute("status")%>">
         <header>
-            <a class="logo" href="home">Dawning Crow</a>
+            <a class="logo" href="home">BLUEBIRD</a>
             <ul class="navbar">
                 <li><a href="home">Home</a></li>
                 <li><a href="">About</a></li>
@@ -82,7 +82,7 @@
             <div>
                     <form class="payment" action="buy" method="POST">
                         <input type="hidden" name="userID" value="<%= user.getUserID() %>" />
-                        <input type="submit" value="Buy all   /ᐠ｡ꞈ｡ᐟ❁ \∫ "> 
+                        <input type="submit" value="Buy all"> 
                     </form>
             </div>        
 
@@ -92,7 +92,7 @@
         <footer>
             <div class="footer">
                 <div class="footer_content_1">
-                    © DAWNING CROW
+                    © BLUEBIRD
                 </div>
                 <div class="footer_content_2">
                     <div class="payment_icon">

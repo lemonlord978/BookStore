@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Bluebird</title>
-        <link rel="icon" href="img/dc_logo.jpg">
+        <link rel="icon" href="https://cdn.dribbble.com/users/1189548/screenshots/4884012/media/486695de6b18ec97632abfe85851ca52.jpg">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="loginpage/css/navbar.css"/>

@@ -57,7 +57,7 @@ public class UpdateProductServlet extends HttpServlet {
         RequestDispatcher dispatcher = null;
         PrintWriter pr = response.getWriter();
         int xprice, xcateID, xid;
-        String xname, ximage, sid, sprice, scateID;
+        String xname, ximage, sid, sprice, scateID, xAuthor;
         sid = request.getParameter("id");
         xname = request.getParameter("name");
         boolean isOk = true;
@@ -66,6 +66,12 @@ public class UpdateProductServlet extends HttpServlet {
 
         if (xname == null || xname.trim().length() == 0 || xname.trim().equals("Invalid name!")) {
             xname = "Invalid name!";
+            isOk = false;
+        }
+        
+        xAuthor = request.getParameter("Author");
+        if (xAuthor == null || xAuthor.trim().length() == 0 || xAuthor.trim().equals("Invalid name!")) {
+            xAuthor = "Invalid name!";
             isOk = false;
         }
 
@@ -87,7 +93,7 @@ public class UpdateProductServlet extends HttpServlet {
         } else {
             xcateID = Integer.parseInt(scateID.trim());
         }
-        Product x = new Product(xid, xname, ximage, xprice, xcateID);
+        Product x = new Product(xid, xname, ximage, xprice, xcateID, xAuthor);
         if (!isOk) {
             request.setAttribute("x", x);
             request.getRequestDispatcher("editProduct.jsp").forward(request, response);
