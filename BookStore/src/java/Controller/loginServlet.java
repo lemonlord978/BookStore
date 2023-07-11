@@ -1,28 +1,16 @@
-package Controller;
+package controller;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.ResultSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
 import java.util.List;
-import model.Category;
-import model.Product;
-import model.User;
+import model.*;
 import DAO.*;
 
-/**
- *
- * @author PC
- */
-public class LoginServlet extends HttpServlet {
-    @Override
+@WebServlet(name = "login", urlPatterns = {"/loginS"})
+public class loginServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -43,7 +31,7 @@ public class LoginServlet extends HttpServlet {
 
 //        Nếu không tìm ra ai sẽ quay lại trang login cùng với thông báo 
         if (x == null) {
-            request.setAttribute("status", "Sorry, username and/or password are/is invalid!");
+            request.setAttribute("status", "Username or password is invalid!");
             request.getRequestDispatcher("Login.jsp").include(request, response);
         } else {
 //            Nếu có thì sẽ chuyển tiếp sang trang home.jsp 

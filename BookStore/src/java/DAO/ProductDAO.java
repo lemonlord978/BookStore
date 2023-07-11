@@ -4,7 +4,6 @@
  */
 package DAO;
 
-import DAO.MyDAO;
 import java.util.ArrayList;
 import java.util.List;
 import model.Product;

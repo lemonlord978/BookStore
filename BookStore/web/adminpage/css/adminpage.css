@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', cursive;
+}
+
+.AdOP{
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100px;
+}
+
+.AdOP button{
+    border: none;
+    padding: 30px 50px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.Admin_page_title_container{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Admin_page_title_container h1{
+    font-size: 3rem;
+    margin: 15px 0 15px 0;
+}
+
+.Admin_register_container{
+/*    display: flex;*/
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.Admin_register_container h4{
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.Admin_register_container .input{
+    margin-bottom: 20px;
+    width: 300px;
+    height: 35px;
+    border: 1px solid grey;
+    padding: 0 20px;
+}
+
+.Admin_register_container input[type=submit]{
+    margin-bottom: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: black;
+}
+
+.register_container{
+    align-items: center;
+    justify-content: center;
+    margin-left: 600px;
+}
+
+.listOfProduct{
+    margin-bottom: 30px;
+}
+
+.TableofProducts{
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.box img{
+    width: 250px;
+    height: auto;
+}
+
+.listOfUser{
+    margin-bottom: 30px;
+}
+
+.TableofUser{
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100px;
+}
+
+

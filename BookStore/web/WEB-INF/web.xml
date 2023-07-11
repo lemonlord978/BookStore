@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <welcome-file-list>
-        <welcome-file>LoginPage.jsp</welcome-file>
+        <welcome-file>Login.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
         <servlet-name>HomeServlet</servlet-name>
-        <servlet-class>Controller.HomeServlet</servlet-class>
+        <servlet-class>controller.HomeServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CategoryServlet</servlet-name>
-        <servlet-class>Controller.CategoryServlet</servlet-class>
+        <servlet-class>controller.CategoryServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SortServlet</servlet-name>
-        <servlet-class>Controller.SortServlet</servlet-class>
+        <servlet-class>controller.SortServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProductServlet</servlet-name>
-        <servlet-class>Controller.ProductServlet</servlet-class>
+        <servlet-class>controller.ProductServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SearchServlet</servlet-name>
-        <servlet-class>Controller.SearchServlet</servlet-class>
+        <servlet-class>controller.SearchServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>Controller.LoginServlet</servlet-class>
+        <servlet-class>controller.LoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>Controller.LogoutServlet</servlet-class>
+        <servlet-class>controller.LogoutServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UpdateServlet</servlet-name>
-        <servlet-class>Controller.UpdateServlet</servlet-class>
+        <servlet-class>controller.UpdateServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>MyAccountServlet</servlet-name>
-        <servlet-class>Controller.MyAccountServlet</servlet-class>
+        <servlet-class>controller.MyAccountServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>InsertPtOServlet</servlet-name>
-        <servlet-class>Controller.AddToCartServlet</servlet-class>
+        <servlet-class>controller.AddToCartServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AddToCartServlet2</servlet-name>
-        <servlet-class>Controller.AddToCartServlet</servlet-class>
+        <servlet-class>controller.AddToCartServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ListCart</servlet-name>
-        <servlet-class>Controller.ListCart</servlet-class>
+        <servlet-class>controller.ListCart</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>

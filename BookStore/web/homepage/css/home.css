@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', cursive;
+}
+:root{
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: #29fd53;
+}
+body{
+    min-height: 100vh;
+    color: black;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 28px 12%;
+    transition: all .50s ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+li{
+    list-style: none;
+}
+
+.logo{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    font-size: 1.1rem;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+#menu-icon{
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 1090px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 27vh;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        transition: all .50s ease;
+        background-color: #F2F2F2;
+        border-bottom-left-radius: 10px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .navbar a{
+        display: block;
+        margin:0;
+        padding:20px;
+        transition: all .50s ease;
+    }
+
+    .navbar a:hover{
+        transition: all .50s ease;
+        background-color: #FCFCFC;
+    }
+
+    .open{
+        right:0%;
+    }
+}

@@ -1,6 +1,5 @@
 package DAO;
 
-import DAO.MyDAO;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -39,7 +38,7 @@ public class UserDAO extends MyDAO {
  
 //    bằng username và password được nhập vào sẽ tìm ra được record có cùng username và password trong bảng userInfo 
     public User getUser(String xUsername, String xPassword) {
-        xSql = "select * from userInfo where username= ? and [password]= ?";
+        xSql = "select * from userInfo where username = ? and password = ?";
 
         int xRollNO, xUserID;
         String xName;

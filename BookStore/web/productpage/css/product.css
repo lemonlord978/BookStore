@@ -1,0 +1,122 @@
+.product_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product_inner_container{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 120px;
+}
+
+.image_container{
+    width: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_container img{
+    width: 90%;
+}
+
+.content_container{
+    width: 50%;
+    margin-top: 10px;
+}
+
+.address a{
+    font-size: 0.7rem;
+    color: grey;
+}
+.address span{
+    font-size: 0.8rem;
+}
+
+.content_container h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.divided{
+    border: 2px solid grey;
+    margin: 10px 0px 10px 0px;
+    width: 30px;
+}
+
+.content_container h2{
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.content_container h3{
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.content_container h3 span{
+    font-weight: bold;
+}
+
+.payment{
+    margin-top: 20px;
+}
+
+.payment input[type=number]{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.payment input[type=submit]{
+    height: 40px;
+    text-align: center;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    background: black;
+    transition: all 0.3s;
+    border: none;
+}
+
+.payment input[type=submit]:hover{
+    background: grey;
+}
+
+.content_container p{
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 1px solid grey
+}
+
+@media (max-width: 1280px){
+    .product_inner_container{
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px){
+    .product_inner_container{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .image_container{
+        width: 100%;
+    }
+    
+    .content_container{
+        width: 80%;
+        padding-left: 20px;
+    }
+    
+    .latest{
+        margin-top: 10vh;
+    }
+}

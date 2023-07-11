@@ -1,0 +1,88 @@
+.authentication{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.authentication h1{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 20px 0;
+
+}
+
+.authentication_container{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.authentication_container h2{
+    margin-bottom: 10px;
+}
+.authentication_container h4{
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+.authentication_container .input{
+    margin-bottom: 20px;
+    width: 90%;
+    height: 35px;
+    border: 1px solid grey;
+    padding: 0 20px;
+}
+
+.authentication_container input[type=submit]{
+    margin-bottom: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: black;
+}
+
+.login_container{
+    width: 50%;
+    padding-left: 2%;
+    border-right: 1px solid grey;
+}
+
+.register_container{
+    width: 50%;
+    padding-left: 2%;
+}
+
+.login_container div{
+    margin-bottom: 20px;
+}
+
+.login_container div input[type=checkbox]{
+    margin-right: 10px;
+    border: none;
+}
+
+@media (max-width: 1090px){
+    .authentication_container{
+        flex-direction: column;
+        width: 100%;
+        transition: .5s;
+
+    }
+
+    .login_container{
+        width: 100%;
+        border-right: none;
+        margin-bottom: 5vh;
+    }
+
+    .register_container{
+        width: 100%;
+    }
+}

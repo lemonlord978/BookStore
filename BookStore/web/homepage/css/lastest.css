@@ -1,0 +1,36 @@
+.latest{
+    padding: 5% 20%;
+}
+
+.divided{
+    border: 2px solid grey;
+    width: 50px;
+    margin: 20px 0 30px 0;
+}
+
+.latest_product_box{
+    width: 300px;
+    border-bottom: 1px solid grey;
+    transition: all .35s ease;
+}
+
+.latest_product_box a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+}
+
+.latest_product_box a img{
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.latest_product_title h4{
+    font-weight: normal;
+}
+
+.latest_product_box:hover{
+    transform: translateY(-10px);
+}

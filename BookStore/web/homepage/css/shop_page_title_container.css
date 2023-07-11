@@ -1,0 +1,181 @@
+.shop_page_title_container{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_title_inner_container{
+    width:50%;
+}
+
+.title_contianer h1{
+    font-size: 3rem;
+    margin: 15px 0 15px 0;
+}
+
+.optional{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.address a{
+    font-size: 0.7rem;
+    color: grey;
+}
+.address span{
+    font-size: 0.8rem;
+}
+
+/* Nút Dropdown*/
+.nut_dropdown {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    min-width: 200px;
+}
+
+/* Thiết lập vị trí cho thẻ div với class dropdown*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Nội dung Dropdown */
+.noidung_dropdown {
+    /*Ẩn nội dụng các đường dẫn*/
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+/* Thiết kế style cho các đường dẫn tronng Dropdown */
+.noidung_dropdown a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+/* thay đổi màu background khi hover vào đường dẫn */
+.noidung_dropdown a:hover {
+    background-color: #ddd;
+}
+
+/* hiển thị nội dung dropdown khi hover */
+.dropdown:hover .noidung_dropdown {
+    display: block;
+}
+
+
+
+/*Dùng Để hiển thị nội dung*/
+.hienThi {
+    display:block;
+}
+
+
+.search_container{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left: -100%;
+    width: 270px;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    transition: all .50s ease;
+    background-color: #F2F2F2;
+    border-bottom-left-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.search_container form{
+    margin-top: 30px;
+}
+
+.search_container form input[type="text"]{
+    padding-left: 10px;
+    width: 90%;
+    border: none;
+    height: 50px;
+}
+
+.search_container form input[type="submit"]{
+    width: 90%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+
+
+.filter {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left: -100%;
+    width: 270px;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    transition: all .50s ease;
+    background-color: #F2F2F2;
+    border-bottom-left-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.filter ul{
+    margin-top: 10px;
+}
+.filter li{
+    padding: 10px;
+    transition: all .50s;
+}
+
+.filter li:hover{
+    font-weight: bold;
+}
+
+#x-icon{
+    margin-top: 20px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+#filter-icon{
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.open_filter{
+    left:0%;
+}
+
+.open_search{
+    left:0%;
+}
+
+@media (max-width: 1090px){
+    .optional{
+        display: block;
+    }
+
+    #sortby{
+        margin: 10px 0 10px 0;
+    }
+}
+

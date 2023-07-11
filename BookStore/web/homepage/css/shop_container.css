@@ -1,0 +1,46 @@
+.shop{
+    padding: 50px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+.shop_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.box{
+    position: relative;
+    width: 246px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all .35s ease;
+}
+
+.box img{
+    width: 100%;
+    height: auto;
+}
+
+.box h4{
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: grey;
+}
+
+.box h5{
+    margin-top: 3px;
+    font-size: 1rem;
+    font-weight: normal
+}
+
+
+.box:hover{
+    transform: translateY(-10px);
+}
