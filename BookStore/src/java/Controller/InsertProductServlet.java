@@ -22,12 +22,13 @@ public class InsertProductServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         RequestDispatcher dispatcher = null;
         PrintWriter pr = response.getWriter();
-        String xname, ximage, sprice,scateID;
+        String xname, ximage, sprice,scateID, xAuthor;
         
         xname = request.getParameter("name");
         ximage = request.getParameter("image");
         sprice = request.getParameter("price");
         scateID = request.getParameter("cateID");
+        xAuthor = request.getParameter("Author");
         
         ProductDAO p = new ProductDAO(); 
         Product x = new Product();
@@ -35,6 +36,7 @@ public class InsertProductServlet extends HttpServlet {
         x.setImage(ximage);
         x.setPrice(Integer.parseInt(sprice));
         x.setCateID(Integer.parseInt(scateID));
+        x.setAuthor(xAuthor);
         
         p.InsertPr(x);
         request.setAttribute("status", "successfully");

@@ -15,9 +15,8 @@
         <link rel="icon" href="https://cdn.dribbble.com/users/1189548/screenshots/4884012/media/486695de6b18ec97632abfe85851ca52.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="productpage/css/navbar.css"/>
-        <link rel="stylesheet" href="homepage/css/footer.css"/>
-        <link rel="stylesheet" href="MyAccount/MyAccount.css"/>
         <link rel="stylesheet" href="adminpage/css/adminpage.css"/>
+        <link rel="stylesheet" href="Edit/Edit.css"/>
 
     </head>
     <body>
@@ -64,9 +63,6 @@
             
 
             <div class="product_edit">
-                <div class="product_edit_title">
-                    <h2>Product detail</h2>
-                </div>
                 <form action="updatePr" method="POST">
                     <div>
                         <p>Id:</p>
@@ -88,6 +84,10 @@
                         <p>CateID<p>
                             <input type="text" name="cateID" value="<%= x.getCateID()%>" /> 
                     </div> 
+                    <div>
+                        <p>Author<p>
+                            <input type="text" name="Author" value="<%= x.getAuthor()%>" /> 
+                    </div>
                     <p><input type="submit" value="Update"></p>
                 </form>   
         </div>

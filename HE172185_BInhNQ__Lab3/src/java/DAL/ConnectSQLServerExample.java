@@ -19,7 +19,7 @@ public class ConnectSQLServerExample {
             + "databaseName=testDept;"
             + "integratedSecurity=true";
     private static String USER_NAME = "sa";
-    private static String PASSWORD = "12345";
+    private static String PASSWORD = "admin";
  
     public static void main(String args[]) {
         try {

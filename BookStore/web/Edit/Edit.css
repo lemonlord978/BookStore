@@ -1,10 +1,24 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 12, 2023, 12:19:12 AM
+    Author     : LEMONLORD
+*/
+.product_edit{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 footer{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 10vh;
     background: black;
-    margin-top: auto;
+    margin-top: 119px;
 }
 
 .footer{
@@ -41,7 +55,6 @@ footer{
 
     .footer_content_1{
         margin-bottom: 15px;
-        transition: .5s;
 
     }
 }

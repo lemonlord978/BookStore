@@ -65,6 +65,7 @@
                         <a href="home">Products</a>
                     </div>
                     <h1><%= x.getName() %> </h1>
+                    <h2><%= x.getAuthor() %></h2>
                     <div class="divided"></div>
                     <h2>$<%= x.getPrice() %> </h2>
                     <h3>All prices are in <span>U.S Dollar</span></h3>
