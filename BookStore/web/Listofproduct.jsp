@@ -63,7 +63,7 @@
                 <tbody>
                     <%
                     if(lst == null){
-                        out.println("he");
+                        out.println("Empty!");
                         }else{
                     if(!lst.isEmpty()){
                     %>

@@ -64,8 +64,10 @@
                             <td class="table_header"> Price </td>
                             <td class="table_header"> Quantity  </td>
                             <td class="table_header"> Total Price</td>
+                            <td class="table_header"> Delete</td>
                         </tr>
                         <%
+                         if(lst!=null){
                          for(Cart o: lst) {
                         %>
                         <tr>
@@ -73,9 +75,13 @@
                             <td><%= o.getName() %></td>
                             <td>$<%= o.getPrice() %></td>
                             <td><%= o.getQuantity() %></td>
-                            <td><%= o.getTotalPrice() %></td>
+                            <td>$<%= o.getTotalPrice() %></td>
+                            <td><a href="deleteCart?id=<%= o.getProductID() %>"><i class="fa-solid fa-trash"></i></a> </td>
                         </tr>  
-                        <% } %> 
+                        <%      }
+                            } else { %> 
+                        <td>Empty</td>
+                        <% } %>
                     </table>   
                 </div>    
             </div>

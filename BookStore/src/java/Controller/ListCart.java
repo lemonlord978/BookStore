@@ -26,11 +26,6 @@ public class ListCart extends HttpServlet {
         List<Cart> lst = u.getUserItemses(x.getUserID());
         request.setAttribute("lst", lst);
         request.getRequestDispatcher("cart.jsp").forward(request, response);
-//        if(lst == null){
-//            out.println("hehe");
-//        }else{
-//            out.println("ehehe");
-//        }
     }
 
 }
