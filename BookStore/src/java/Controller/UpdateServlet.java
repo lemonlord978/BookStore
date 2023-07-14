@@ -69,7 +69,7 @@ public class UpdateServlet extends HttpServlet {
             User user;
             user = u.getUser(xUsername, xPassword);
             request.setAttribute("user", user);
-
+            request.getSession().setAttribute("currUser", user);
             request.setAttribute("lsto", lsto);
             request.setAttribute("status", "Informations have been update");
             request.getRequestDispatcher("MyAccount.jsp").forward(request, response);

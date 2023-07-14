@@ -80,6 +80,7 @@
                             </div>
                         </div>
                         <input type="hidden" name="rollno" value="<%= x.getRollno() %> ">
+                        <input type="hidden" name="id" value="<%= x.getUserID() %> ">
                         <p><input type="submit" value="Update"> 
                             <a href="logout"> Logout </a>
 
