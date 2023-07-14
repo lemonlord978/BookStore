@@ -17,7 +17,7 @@ public class UserDAO extends MyDAO {
             ps = con.prepareStatement(xSql);
             rs = ps.executeQuery();
             int xId, xRollno;
-            String xName, xusername, xpassword;
+            String xName, xusername, xpassword, xAddress;
             User x;
             while(rs.next()){
                 xId = rs.getInt("userID");
@@ -25,7 +25,8 @@ public class UserDAO extends MyDAO {
                 xusername = rs.getString("username");
                 xpassword = rs.getString("password");
                 xRollno = rs.getInt("Rollno");
-                x = new User(xId,xName,xusername,xpassword,xRollno);
+                xAddress = rs.getString("Address");
+                x = new User(xId,xName,xusername,xpassword,xRollno, xAddress);
                 t.add(x);
             }
             rs.close();
@@ -41,7 +42,7 @@ public class UserDAO extends MyDAO {
         xSql = "select * from userInfo where username = ? and password = ?";
 
         int xRollNO, xUserID;
-        String xName;
+        String xName, xAddress;
         User x = null;
         try {
             ps = con.prepareStatement(xSql);
@@ -53,7 +54,8 @@ public class UserDAO extends MyDAO {
                 xUserID = rs.getInt("userID");
                 xRollNO = rs.getInt("Rollno");
                 xName = rs.getString("name");
-                x = new User(xUserID, xName, xUsername, xPassword, xRollNO);
+                xAddress = rs.getString("Address");
+                x = new User(xUserID, xName, xUsername, xPassword, xRollNO, xAddress);
             } else {
                 x = null;
             }
@@ -74,13 +76,14 @@ public class UserDAO extends MyDAO {
             ps.setString(1, xId);
             rs = ps.executeQuery();
             int  xRollno;
-            String xName, xusername, xpassword;
+            String xName, xusername, xpassword, xAdress;
             while(rs.next()){
                 xName = rs.getString("name");
                 xusername = rs.getString("username");
                 xpassword = rs.getString("password");
                 xRollno = rs.getInt("Rollno");
-                x = new User(Integer.parseInt(xId),xName,xusername,xpassword,xRollno);
+                xAdress = rs.getString("Address");
+                x = new User(Integer.parseInt(xId),xName,xusername,xpassword,xRollno, xAdress);
             }
 
             rs.close();
@@ -95,10 +98,11 @@ public class UserDAO extends MyDAO {
 //    các giá trị là username, password và Rollno(giá trị mặc định là 2)
     public String UserRegister(User user) {
         try {
-            xSql = "insert into userInfo(username,password, Rollno) values (?,?,2)";
+            xSql = "insert into userInfo(username,password, Rollno, Address) values (?,?,2,?)";
             ps = con.prepareStatement(xSql);
             ps.setString(1, user.getUsername());
             ps.setString(2, user.getPassword());
+            ps.setString(3, user.getAddress());
             ps.executeUpdate();
 
         } catch (Exception e) {
@@ -139,13 +143,14 @@ public class UserDAO extends MyDAO {
 
     //Update a Student
     public void update(int xUserID, User x) {
-        xSql = "update userInfo set name=?, username=?,password=? where userID=?";
+        xSql = "update userInfo set name=?, username=?,password=?,Address=? where userID=?";
         try {
             ps = con.prepareStatement(xSql);
             ps.setString(1, x.getName());
             ps.setString(2, x.getUsername());
             ps.setString(3, x.getPassword());
-            ps.setInt(4, xUserID);
+            ps.setString(4, x.getAddress());
+            ps.setInt(5, xUserID);
             ps.executeUpdate();
             ps.close();
         } catch (Exception e) {

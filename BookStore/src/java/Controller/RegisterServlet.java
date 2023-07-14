@@ -20,13 +20,14 @@ public class RegisterServlet extends HttpServlet {
         UserDAO dao = new UserDAO();
 
 //        Khai bao cac bien 
-        String xusername, xpassword;
+        String xusername, xpassword, xAddress;
         String xpassword_check;
 
 //        Lay gia tri input nhap vao
         xusername = request.getParameter("username");
         xpassword = request.getParameter("password");
         xpassword_check = request.getParameter("password_repeat");
+        xAddress = request.getParameter("Address");
 
         RequestDispatcher dispatcher = null;
 
@@ -58,6 +59,7 @@ public class RegisterServlet extends HttpServlet {
         User user = new User();
         user.setUsername(xusername);
         user.setPassword(xpassword);
+        user.setAddress(xAddress);
         dao.UserRegister(user);
         request.setAttribute("status", "successfully");
         dispatcher = request.getRequestDispatcher("Login.jsp");

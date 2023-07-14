@@ -75,8 +75,8 @@
                                 <input type="password" name="password" value="<%= x.getPassword() %>"/> 
                             </div>
                             <div>
-                                <p>ID</p>
-                                <input type="text" name="id" value="<%= x.getUserID() %> " readonly/> 
+                                <p>Address</p>
+                                <input type="text" name="Address" value="<%= x.getAddress() %> "/> 
                             </div>
                         </div>
                         <input type="hidden" name="rollno" value="<%= x.getRollno() %> ">

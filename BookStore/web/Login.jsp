@@ -49,11 +49,13 @@
 
                     <form action="register" method="post">
                         <h4>Username</h4>
-                        <input class="input" type="text" name="username" value="" required="required" />
+                        <input class="input" type="text" name="username" required="required" />
                         <h4>Password</h4>
-                        <input class="input" type="password" name="password" value="" required="required"/> 
+                        <input class="input" type="password" name="password" required="required"/> 
                         <h4>Password Repeat</h4>
-                        <input class="input" type="password" name="password_repeat" value="" required="required"/> 
+                        <input class="input" type="password" name="password_repeat" required="required"/> 
+                        <h4>Address</h4>
+                        <input class="input" type="text" name="Address" required="required"/>
                         <br>
                         <input type="Submit" value="REGISTER"> 
                     </form>  

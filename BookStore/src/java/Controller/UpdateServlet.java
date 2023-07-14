@@ -31,13 +31,14 @@ public class UpdateServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter pr = response.getWriter();
 
-        String xName, xUsername, xPassword, sUserID, sRollno;
+        String xName, xUsername, xPassword, sUserID, sRollno, xAddress;
         int xUserID, xRollno;
         xName = request.getParameter("name");
         xUsername = request.getParameter("username");
         xPassword = request.getParameter("password");
         sUserID = request.getParameter("id").trim();
         sRollno = request.getParameter("rollno").trim();
+        xAddress = request.getParameter("Address").trim();
 
         xUserID = Integer.parseInt(sUserID);
         xRollno = Integer.parseInt(sRollno);
@@ -61,7 +62,7 @@ public class UpdateServlet extends HttpServlet {
         }
 
         if (xUsername.equalsIgnoreCase(userNow.getUsername())) {
-            User x = new User(xUserID, xName, xUsername, xPassword, xRollno);
+            User x = new User(xUserID, xName, xUsername, xPassword, xRollno, xAddress);
 
             UserDAO u = new UserDAO();
             u.update(xUserID, x);
