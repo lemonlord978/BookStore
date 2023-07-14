@@ -19,3 +19,4 @@ searchicon.onclick = () => {
     searchnav.classList.toggle('open_search');
 }
 
+

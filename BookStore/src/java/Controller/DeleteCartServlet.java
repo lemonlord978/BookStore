@@ -37,7 +37,7 @@ public class DeleteCartServlet extends HttpServlet {
             pr.println("<h2>Product is not found</h2>");
         } else {
             p.delete(sid);
-            List<Cart> lst = (List<Cart>) p.getCartItem(UserID, xid);
+            List<Cart> lst = (List<Cart>) p.getUserItemses(UserID);
             request.setAttribute("lst", lst);
             request.getRequestDispatcher("cart.jsp").forward(request, response);
         }

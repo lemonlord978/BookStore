@@ -77,7 +77,7 @@
                         <td>$<%=x.getPrice()%></td>
                         <td><%=x.getCateID()%></td>
                         <td><a href="updatePr?id=<%= x.getId() %>">  Edit </a> </td>
-                        <td><a href="deletePr?id=<%= x.getId() %>">  Delete </a> </td>
+                        <td><a href="deletePr?id=<%= x.getId() %>" onclick="return confirm('Are you sure?')">  Delete </a> </td>
                     </tr>
                     <% } %>  
                     <% } else {%> 

@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>My Account</title>
+        <title>Cart</title>
         <link rel="icon" href="https://cdn.dribbble.com/users/1189548/screenshots/4884012/media/486695de6b18ec97632abfe85851ca52.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="productpage/css/navbar.css"/>
@@ -76,12 +76,11 @@
                             <td>$<%= o.getPrice() %></td>
                             <td><%= o.getQuantity() %></td>
                             <td>$<%= o.getTotalPrice() %></td>
-                            <td><a href="deleteCart?id=<%= o.getProductID() %>"><i class="fa-solid fa-trash"></i></a> </td>
+                            <td><a href="deleteCart?id=<%= o.getProductID() %>" onclick="return confirm('Are you sure?')"><i class="fa-solid fa-trash"></i></a> </td>
                         </tr>  
                         <%      }
-                            } else { %> 
-                        <td>Empty</td>
-                        <% } %>
+                            } 
+                        %>
                     </table>   
                 </div>    
             </div>
