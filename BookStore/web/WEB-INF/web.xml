@@ -51,6 +51,10 @@
         <servlet-name>ListCart</servlet-name>
         <servlet-class>controller.ListCart</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteOrder</servlet-name>
+        <servlet-class>controller.DeleteOrder</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -98,6 +102,10 @@
     <servlet-mapping>
         <servlet-name>ListCart</servlet-name>
         <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteOrder</servlet-name>
+        <url-pattern>/DeleteOrder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

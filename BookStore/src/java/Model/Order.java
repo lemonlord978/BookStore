@@ -17,6 +17,7 @@ public class Order {
     int UserID;
     Date date;
     int price;
+    int status;
 
     public Order(int OrderID, int UserID, int price) {
         this.OrderID = OrderID;
@@ -29,11 +30,12 @@ public class Order {
         this.price = price;
     }
 
-    public Order(int OrderID, int UserID, Date date, int price) {
+    public Order(int OrderID, int UserID, Date date, int price, int status) {
         this.OrderID = OrderID;
         this.UserID = UserID;
         this.date = date;
         this.price = price;
+        this.status = status;
     }
 
     public int getOrderID() {
@@ -50,6 +52,14 @@ public class Order {
 
     public void setUserID(int UserID) {
         this.UserID = UserID;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public Date getDate() {

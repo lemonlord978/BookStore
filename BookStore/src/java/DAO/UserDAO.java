@@ -10,33 +10,33 @@ import model.User;
 
 public class UserDAO extends MyDAO {
 
-    public List<User> getAllUser(){
+    public List<User> getAllUser() {
         List<User> t = new ArrayList<>();
         xSql = "select * from userInfo";
-        try{
+        try {
             ps = con.prepareStatement(xSql);
             rs = ps.executeQuery();
             int xId, xRollno;
             String xName, xusername, xpassword, xAddress;
             User x;
-            while(rs.next()){
+            while (rs.next()) {
                 xId = rs.getInt("userID");
                 xName = rs.getString("name");
                 xusername = rs.getString("username");
                 xpassword = rs.getString("password");
                 xRollno = rs.getInt("Rollno");
                 xAddress = rs.getString("Address");
-                x = new User(xId,xName,xusername,xpassword,xRollno, xAddress);
+                x = new User(xId, xName, xusername, xpassword, xRollno, xAddress);
                 t.add(x);
             }
             rs.close();
             ps.close();
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return t;
     }
- 
+
 //    bằng username và password được nhập vào sẽ tìm ra được record có cùng username và password trong bảng userInfo 
     public User getUser(String xUsername, String xPassword) {
         xSql = "select * from userInfo where username = ? and password = ?";
@@ -65,25 +65,25 @@ public class UserDAO extends MyDAO {
         }
         return (x);
     }
-    
+
     //get user by id
     public User getUserbyId(String xId) {
-        User x =null;
+        User x = null;
         xSql = "select * from userInfo where userID = ?";
         try {
-            
+
             ps = con.prepareStatement(xSql);
             ps.setString(1, xId);
             rs = ps.executeQuery();
-            int  xRollno;
+            int xRollno;
             String xName, xusername, xpassword, xAdress;
-            while(rs.next()){
+            while (rs.next()) {
                 xName = rs.getString("name");
                 xusername = rs.getString("username");
                 xpassword = rs.getString("password");
                 xRollno = rs.getInt("Rollno");
                 xAdress = rs.getString("Address");
-                x = new User(Integer.parseInt(xId),xName,xusername,xpassword,xRollno, xAdress);
+                x = new User(Integer.parseInt(xId), xName, xusername, xpassword, xRollno, xAdress);
             }
 
             rs.close();
@@ -92,6 +92,35 @@ public class UserDAO extends MyDAO {
             e.printStackTrace();
         }
         return (x);
+    }
+
+    public List<User> getUserbyIds(String xId) {
+        List<User> t = new ArrayList<>();
+        User x = null;
+        xSql = "select * from userInfo where userID = ?";
+        try {
+
+            ps = con.prepareStatement(xSql);
+            ps.setString(1, xId);
+            rs = ps.executeQuery();
+            int xRollno;
+            String xName, xusername, xpassword, xAdress;
+            while (rs.next()) {
+                xName = rs.getString("name");
+                xusername = rs.getString("username");
+                xpassword = rs.getString("password");
+                xRollno = rs.getInt("Rollno");
+                xAdress = rs.getString("Address");
+                x = new User(Integer.parseInt(xId), xName, xusername, xpassword, xRollno, xAdress);
+                t.add(x);
+            }
+
+            rs.close();
+            ps.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return (t);
     }
 
 //    Sau khi kiểm tra các giá trị input, record sẽ được insert vào bảng userInfo với 
@@ -127,7 +156,7 @@ public class UserDAO extends MyDAO {
         }
         return false;
     }
-    
+
 //  Kiểm tra password nhập vào có đúng điều kiện không, điều kiên 
 //  cụ thể ở đây là password phải có từ 8 đến 20 kí tự bao gồm chữ và số.
     public boolean checkPassword(String password) {
@@ -157,22 +186,22 @@ public class UserDAO extends MyDAO {
             e.printStackTrace();
         }
     }
-    
-    public String createAd(User user){
-        try{
+
+    public String createAd(User user) {
+        try {
             xSql = "insert into userInfo(username,password, Rollno) values (?,?,1)";
             ps = con.prepareStatement(xSql);
             ps.setString(1, user.getUsername());
             ps.setString(2, user.getPassword());
             ps.executeUpdate();
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             //e.printStackTrace();
             return e.getMessage();
         }
         return "true";
     }
-    
+
     public void delete(String id) {
         xSql = "delete from userInfo where userID=?";
         try {

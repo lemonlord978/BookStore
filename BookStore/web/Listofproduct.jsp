@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="homepage/css/footer.css"/>
         <link rel="stylesheet" href="MyAccount/MyAccount.css"/>
         <link rel="stylesheet" href="adminpage/css/adminpage.css"/>
-        
+
     </head>
     <body>
         <header>
@@ -32,12 +32,11 @@
                 <li><a href="">Contact</a></li>
                 <li><a href="home">Products</a></li>
                 <li>
-                    <a href="Admin.jsp">Admin</a>
+                    <a href="Admin.jsp">Account</a>
                 </li>
 
             </ul>
             <div class="main">
-                <a><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
                 <a href="myaccount"><i class="fa-sharp fa-regular fa-user"></i></a>
                 <a><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
                 <div><i id="menu-icon" class="fa-solid fa-bars"></i></div>
@@ -48,6 +47,20 @@
             <h1>List of Products</h1>
             <hr>
         </div>
+
+        <div class="AdOP ">
+            <button>
+                <a href="InsertProduct.jsp">Add Product</a>
+            </button>
+        </div>
+
+        <div class="SearchBar">
+            <form class="searchBox" action="LPSearch" method="POST">
+                <input type="text" name="name" value="" placeholder="Search.."/>
+                <input type="submit" value="Search"> 
+            </form>  
+        </div>
+
         <div class="listOfProduct">
             <table class="TableofProducts" border="1">
                 <thead>

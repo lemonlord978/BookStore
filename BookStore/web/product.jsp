@@ -32,7 +32,7 @@
                 <li><a href="home">Products</a></li>
                 <li>
                     <% if (user.getRollno() == 1) { %>
-                    <a href="Admin.jsp">Admin</a>
+                    <a href="Admin.jsp">Account</a>
                     <% } %>
                 </li>
             </ul>

@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="homepage/css/footer.css"/>
         <link rel="stylesheet" href="MyAccount/MyAccount.css"/>
         <link rel="stylesheet" href="adminpage/css/adminpage.css"/>
-        
+
     </head>
     <body>
         <header>
@@ -32,24 +32,34 @@
                 <li><a href="">Contact</a></li>
                 <li><a href="home">Products</a></li>
                 <li>
-                    <a href="Admin.jsp">Admin</a>
+                    <a href="Admin.jsp">Account</a>
                 </li>
 
             </ul>
             <div class="main">
-                <a><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
                 <a href="myaccount"><i class="fa-sharp fa-regular fa-user"></i></a>
                 <a><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
                 <div><i id="menu-icon" class="fa-solid fa-bars"></i></div>
             </div>
         </header>
-        
+
         <section class="Admin_page_title_container">
             <h1>List of User</h1>
             <hr>  
         </section>
         
         <div class="listOfUser">
+            <div class="AdOP">
+                <button>
+                    <a href="CreateAdmin.jsp">Create an Admin</a>
+                </button>
+            </div>
+            <div class="SearchBar">
+            <form class="searchBox" action="LUSearch" method="POST">
+                <input type="text" name="name" value="" placeholder="Search.."/>
+                <input type="submit" value="Search"> 
+            </form>  
+        </div>
             <table class="TableofUser" border="1">
                 <thead>
                     <tr>
@@ -58,13 +68,14 @@
                         <th scope="col" "> Username </th>
                         <th scope="col"> Password </th>
                         <th scope="col"> Rollno </th>
-                        <th scope="col"> </th>
+                        <th scope="col"> Edit</th>
+                        <th scope="col"> Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     <%
                     if(lst == null){
-                        out.println("he");
+                        out.println("Emptys");
                         }else{
                     if(!lst.isEmpty()){
                     %>
@@ -77,6 +88,7 @@
                         <td><%=x.getUsername()%></td>
                         <td><%=x.getPassword()%></td>
                         <td><%=x.getRollno()%></td>
+                        <td><a href="updateUser?userID=<%= x.getUserID() %>">  Edit </a> </td>
                         <td><a href="deleteu?userID=<%= x.getUserID() %>">  Delete </a> </td>
                     </tr>
                     <% } %>  
@@ -87,8 +99,9 @@
                 </tbody>
             </table>
         </div>
-        
-        
+                
+
+
         <!--footer-->
         <footer>
             <div class="footer">

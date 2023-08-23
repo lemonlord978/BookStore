@@ -24,11 +24,6 @@ public class ListofProduct extends HttpServlet {
         List<Product> lst = u.getProducts();
         request.setAttribute("lst", lst);
         request.getRequestDispatcher("Listofproduct.jsp").forward(request, response);
-//        if(lst == null){
-//            out.println("hehe");
-//        }else{
-//            out.println("ehehe");
-//        }
     }
 
 }

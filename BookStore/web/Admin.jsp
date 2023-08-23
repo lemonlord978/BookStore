@@ -25,9 +25,9 @@
                 <li><a href="home">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a href="home">Products</a></li>
+                <li><a href="ListofProduct">Products</a></li>
                 <li>
-                    <a href="Admin.jsp">Admin</a>
+                    <a href="Admin.jsp">Account</a>
                 </li>
                     
             </ul>
@@ -51,13 +51,10 @@
                 <a href="ListofProduct">List of Product</a>
             </button>
             <button>
-                <a href="InsertProduct.jsp">Add Product</a>
-            </button>
-            <button>
                 <a href="Listofuser">List of User</a>
             </button>
             <button>
-                <a href="CreateAdmin.jsp">Create an Admin</a>
+                <a href="magageorder">Bill Management</a>
             </button>
             
         </div>

@@ -47,7 +47,7 @@ public class DeleteUserServlet extends HttpServlet {
             p.delete(sid);
             List<User> lst = p.getAllUser();
             request.setAttribute("lst", lst);
-            request.getRequestDispatcher("Listofproduct.jsp").forward(request, response);
+            request.getRequestDispatcher("Listofuser.jsp").forward(request, response);
         }
 
     }

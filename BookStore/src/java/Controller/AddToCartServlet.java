@@ -1,3 +1,4 @@
+
 package controller;
 
 import java.io.*;
@@ -13,22 +14,6 @@ public class AddToCartServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter pr = response.getWriter();
-
-//        Khai bao ProductDAO va CategoryDAO
-        ProductDAO u = new ProductDAO();
-        CategoryDAO c = new CategoryDAO();
-
-        //            In ra list cac san pham
-        List<Product> lst = u.getProducts();
-        request.setAttribute("lst", lst);
-
-        //            In ra list 5 san pham moi nha
-        List<Product> lst5 = u.getNewestProductsBy5();
-        request.setAttribute("lst5", lst5);
-
-        //            in ra list Category (loai san pham)
-        List<Category> lstc = c.getCategorys();
-        request.setAttribute("lstc", lstc);
 
         //Khai bao nhung input duoc nhap vao
         int xUserID, xProductID, xTotalPrice, xQuantity = 0, xPrice = 0;
